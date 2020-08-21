@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Cadastrar Usuário</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="http://localhost:3000/javascripts/user.js"></script>
+      <script type="text/javascript">
+        if(document.location.href.includes('invalid')){
+          alert("Dados incorretos!");
+          window.location.href="/login";
+        }
+      </script>
+  </head>
+  <header>
+    <nav>
+      <a id="a-inicio" href="/">Início</a>
+    </nav>
+  </header>
+  <body class="inner-body">
+    <div class="login">
+      <h1>Entrar</h1>
+      <form action="/login" method="POST">
+        <p>
+            <label>E-mail: </label><br/>
+            <input class="form-control" type="email" name="email" required/>
+        </p>
+        <p>
+            <label>Senha: </label><br/>
+            <input class="form-control" type="password" name="senha" required/>
+        </p>
+        <p>Não possui uma conta? <a href="/new-user" style="font-size: 13pt;">Cadastre-se</a></p>
+        <p>
+            <input class="btn btn-primary" type="submit" value="Login"/>
+        </p>
+      </form>
+      </div>
+  </body>
+</html>

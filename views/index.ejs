@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Cadastro de Clientes</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="http://localhost:3000/javascripts/user.js"></script>
+      <script src="https://use.fontawesome.com/70f57dcb10.js"></script>
+  </head>
+  <header>
+    <nav>
+      <a id="a-inicio" href="/">Início</a>
+      <% if (!user) { %>
+      <span id="user-menu">
+        <a id="a-entrar" href="/login">Entrar</a>
+        <a id="a-cadastrar" href="/new-user">Cadastrar</a>
+      </span>
+      <% } %>
+      <span id="user-menu-logged">
+        <a id="a-sair" href="/logout">Sair</a>
+      </span>
+      </nav>
+  </header>
+  <body class="inner-body">
+    <div class="content">
+      <div class="content-center">
+    <h1>Listagem de Clientes</h1>
+    <table class="index-table">
+      <thead>
+          <tr style="background-color: #CCC;">
+
+            <td style="width: 50%;">Nome</td>
+            <td style="width: 15%;">Idade</td>
+            <td style="width: 15%;">UF</td>
+            <td style="width: 20%;">Ações</td>
+
+          </tr>
+      </thead>
+      <tbody>
+          <% if(!docs || docs.length == 0) { %>
+            <tr>
+              <td colspan="4">Nenhum cliente cadastrado.</td>
+            </tr>  
+          <% } else {
+            docs.forEach(function(customer){ %>
+              <tr>
+                <td style="width: 50%"><%= customer.nome %></td>
+                <td style="width: 15%"><%= customer.idade %></td>
+                <td style="width: 15%"><%= customer.uf %></td>
+                <td style="width: 15%">
+                  <a href="/delete/<%= customer._id %>" id="a-delete" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir?');">X</a>
+              </td>
+              </tr>
+            <% })
+          }%>
+      </tbody>
+    </table><br/>
+    <a class="btn btn-success" style="margin-top: 10px;" href="/new">Cadastrar</a>
+    </div>
+  </div>
+  </body>
+</html>

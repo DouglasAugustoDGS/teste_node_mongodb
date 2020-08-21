@@ -1,0 +1,130 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.inner-body{
+  background-color: rgb(230,230,230);
+}
+
+a {
+  color: #00B7FF;
+}
+
+#a-delete{
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 10pt;
+  padding: 1px 0px 1px 1px;
+}
+
+.content{
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.content-center{
+  text-align: center;
+}
+
+.login{
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.index-table{
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  text-align: center;
+  display: inline-table;
+  width: 50%;
+}
+
+.index-table tr th{
+  border: 1px solid black;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+ }
+ 
+ .index-table th{
+  font-size: 11pt;
+ }
+ 
+ .index-table tr td{
+  border: 1px solid black;
+  padding: 5px;
+ }
+
+ .index-table thead{
+   font-weight: bold;
+ }
+
+ .index-table tbody{
+   background-color: rgb(240,240,255);
+ }
+
+ a{
+  text-transform: none;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 15pt;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-top: -5px;
+  font-weight: bold;
+  font-family: 'Arial';
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav{
+  padding: 15px;
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid gray;
+  margin-left: -50px;
+  margin-top: -50px;
+  position: fixed;
+  background-color: dodgerblue;
+}
+
+#a-inicio{
+  color: white;
+  text-decoration: none;
+}
+
+#a-entrar{
+  color: white;
+  text-decoration: none;
+}
+
+#a-cadastrar{
+  color: white;
+  text-decoration: none;
+}
+
+#a-sair{
+  color: white;
+  text-decoration: none;
+}
+
+#user-menu{
+  float: right;
+}
+
+#user-menu-logged{
+  float: right;
+}
